@@ -323,7 +323,7 @@ Session.vim
 tags
 
 ### Project template
-server/media/
+server/media/*
 
 .pytest_cache/
 .env
