@@ -40,11 +40,11 @@ class Question(models.Model):
         unique=True,
     )
     question_title = models.CharField(blank=False, null=False, max_length=100)
-    question_text = models.CharField(blank=False, null=False, max_length=1500)
+    question_text = models.TextField(blank=True)
     question_medias = models.ManyToManyField(to=QuestionMedia, blank=True)
 
     solution_answer = models.CharField(blank=False, null=False, max_length=50)
-    solution_text = models.CharField(blank=False, null=False, max_length=1500)
+    solution_text = models.TextField(blank=True)
     solution_medias = models.ManyToManyField(to=SolutionMedia, blank=True)
 
     difficulty = models.CharField(max_length=25, choices=Difficulty.choices)
